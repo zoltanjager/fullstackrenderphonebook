@@ -1,0 +1,45 @@
+ GET http://localhost:3001/api/persons
+
+###
+
+ DELETE http://localhost:3001/api/persons/2
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Kun Béla",
+    "number": "123456"
+}
+
+###
+
+#wrong request
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Kun Béla1"
+}
+
+
+###
+
+#wrong request
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "number": "12344"
+}
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Kun Bela",
+    "number": "1234356"
+}
